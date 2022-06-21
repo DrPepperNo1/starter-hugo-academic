@@ -25,7 +25,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Artificial Intelligence
+    - course:  B.S. in Microelectronic Engineering
       institution: Huazhong University of Science and Technology
       year: 2019~2023(Expected)
 
@@ -35,7 +35,7 @@ education:
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 
 social:
-  - icon: envelope
+  - icon: circle-envelope
     icon_pack: fas
     link: "mailto:RainHsiaqwq@gmail.com"
   - icon: github
