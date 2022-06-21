@@ -28,7 +28,7 @@ education:
     - course:  B.S. in Microelectronic Engineering
       institution: Huazhong University of Science and Technology
       year: 2019~present
-    - course:  Course-based International Student
+    - course:  Graduate Academic Preparation Program Student
       institution: University of California, Santa Barbara
       year: Sep, 2022~June, 2023(Expected)
 # Social/Academic Networking
