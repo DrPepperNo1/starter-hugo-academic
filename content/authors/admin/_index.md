@@ -35,7 +35,7 @@ education:
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 
 social:
-  - icon: circle-envelope
+  - icon: square-envelope
     icon_pack: fas
     link: "mailto:RainHsiaqwq@gmail.com"
   - icon: github
