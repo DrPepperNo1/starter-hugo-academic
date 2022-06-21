@@ -27,7 +27,7 @@ education:
   courses:
     - course: PhD in Artificial Intelligence
       institution: Huazhong University of Science and Technology
-      year: 2012
+      year: 2019~present
     - course: MEng in Artificial Intelligence
       institution: Massachusetts Institute of Technology
       year: 2009
