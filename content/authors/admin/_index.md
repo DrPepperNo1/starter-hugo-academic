@@ -11,7 +11,8 @@ role: Senior in Microelectronic Engineering
 organizations:
   - name: Huazhong University of Science and Technology
     url: http://english.hust.edu.cn/
-
+## Contact
+Emailhhhh
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
 
