@@ -35,8 +35,6 @@ education:
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 
 social:
-# Automatically link email and phone or display as text?
-  autolink: true
   - icon: envelope
     icon_pack: fas
     link: "mailto:RainHsiaqwq@gmail.com"
