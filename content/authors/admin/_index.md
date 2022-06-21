@@ -34,27 +34,23 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 widget: blank
-
-# This file represents a page section.
-headless: true
-
 # Order that this section appears on the page.
 weight: 4
 
-# Section title
-title: Hello
+  # Section title
+  title: Hello
 
-# Section subtitle
-subtitle:
+  # Section subtitle
+  subtitle:
 
-# Section design
-design:
-  # Use a 1-column layout
-  columns: "1"
-  # Use a dark navy background with light text.
-  background:
-    color: 'navy'
-    text_color_light: true
+  # Section design
+  design:
+    # Use a 1-column layout
+    columns: "1"
+    # Use a dark navy background with light text.
+    background:
+      color: 'navy'
+      text_color_light: true
 social:
   - icon: envelope
     icon_pack: fas
