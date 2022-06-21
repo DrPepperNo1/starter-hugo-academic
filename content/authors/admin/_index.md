@@ -6,8 +6,9 @@ title: Xia, Yu
 superuser: true
 
 # Role/position/tagline
-role: Senior in Microelectronic Engineering
-
+role: 
+  - Senior in Microelectronic Engineering
+  - Email RainHsiaqwq@gmail.com
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: Huazhong University of Science and Technology
