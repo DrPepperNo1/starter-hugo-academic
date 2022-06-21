@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Xia, Yu hhhh
+title: Xia, Yu
 
 # Is this the primary user of the site?
 superuser: true
@@ -10,7 +10,7 @@ role: Senior in Microelectronic Engineering
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name:Huazhong University of Science and Technology
+  - name: Huazhong University of Science and Technology
     url: http://english.hust.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
