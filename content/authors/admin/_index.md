@@ -6,9 +6,7 @@ title: Xia, Yu
 superuser: true
 
 # Role/position/tagline
-role: 
-  - Senior in Microelectronic Engineering
-  - Email RainHsiaqwq@gmail.com
+role: Senior in Microelectronic Engineering
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: Huazhong University of Science and Technology
@@ -42,7 +40,9 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/RainyDayqwq
-
+  - icon: cv
+    icon_pack: ai
+    link: uploads/resume.pdf
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`,
 # and uncomment the lines below.
@@ -51,7 +51,7 @@ social:
 #   link: uploads/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: 'RainHsiaqwq@gmail.com'
+email: ''
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
