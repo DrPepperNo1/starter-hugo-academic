@@ -34,23 +34,15 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 widget: blank
-# Order that this section appears on the page.
-weight: 4
+headless: true
 
-  # Section title
-  title: Hello
-
-  # Section subtitle
-  subtitle:
-
-  # Section design
-  design:
-    
-    columns: "1"
-    
-    background:
-      color: 'navy'
-      text_color_light: true
+# ... Put Your Section Options Here (title etc.) ...
+title: My New Section
+subtitle:
+weight: 10  # section position on page
+design:
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns: '1'
 social:
   - icon: envelope
     icon_pack: fas
