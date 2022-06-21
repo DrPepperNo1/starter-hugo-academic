@@ -27,8 +27,10 @@ education:
   courses:
     - course:  B.S. in Microelectronic Engineering
       institution: Huazhong University of Science and Technology
-      year: 2019~2023(Expected)
-
+      year: 2019~present
+    - course:  International Student
+      institution: University of California, Santa Barbara
+      year: Sep, 2022~June, 2023(Expected)
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
