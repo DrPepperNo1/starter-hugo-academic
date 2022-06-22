@@ -51,7 +51,8 @@ subtitle = ""
 +++
 
 ## 👋 Welcome to the Academic Template
-
+![QQ图片20220622233418](https://s2.loli.net/2022/06/22/Wpqb81f9XCerDv7.jpg)
+还可以自己上传照片🥰
 The Wowchemy **Academic Resumé Template** for Hugo empowers you to create your job-winning online resumé and showcase your academic publications.
 
 [Check out the latest demo](https://academic-demo.netlify.app) of what you'll get in less than 10 minutes, or [view the showcase](https://wowchemy.com/user-stories/).
