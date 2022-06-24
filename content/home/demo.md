@@ -51,14 +51,6 @@ subtitle = ""
 +++
 
 ## 还可以在网页上展示照片🥰
-- 2020年8月在湿地公园👉
-<img src="https://s2.loli.net/2022/06/22/Wpqb81f9XCerDv7.jpg" alt="image-20220622212304195" style="zoom:67%;" />
-- 2021年7月在张掖❤️
-
-<img src="https://s2.loli.net/2022/06/22/JuHiIzZVACFfO4m.jpg" style="zoom:67%;" />
-<img src="https://s2.loli.net/2022/06/22/bdJvm6A9sHgU8fG.jpg" style="zoom:67%;" />
-
-
 
 The Wowchemy **Academic Resumé Template** for Hugo empowers you to create your job-winning online resumé and showcase your academic publications.
 
