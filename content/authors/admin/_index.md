@@ -59,9 +59,6 @@ email: ''
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-这个网站只是个模板，这些英文内容都是模板自带的内容，不是我写的。
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am currently a junior in Huazhong University of Science and Technology pursuing a major in Microelectronic Engineering. This September, I am going to the University of California, Santabarbara to complete my final year of study as well as meet a more wondrous world because I have been granted admission to its International Program. As a not-that-smart student, I chose to be diligent driven by a sense of obligation and earned a 3.96/4.0 cumulative GPA in my first three years of undergraduate study, which ensured that I had a relatively solid foundation in mathematics, physics and my subject area. My previous research and project experiences lie in various areas including Convolution Neural Networks, Recurrent Neural Networks, single image super resolution,  FPGA Programming (all learn by myself). Meanwhile, I am interested in various areas such as GAN for the computer vision field, DQN for game AI, Brain-inspired Computing and Devices and so on. In my opinion, try to foray into unfamiliar areas, gradually figure out the rules behind them, and finally come up with your own ideas and insights to solve problems, this series of processes in itself can give us a sense of accomplishment and fulfillment. I believe It is the process which matters most rather than the outcome. I also believe once you concentrate on the process, the outcome will come consequently.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}cv{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}cv{{< /staticref >}}.
