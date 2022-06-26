@@ -26,10 +26,10 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course:  B.S. in Microelectronic Engineering       
+    - course:  B.S. in Microelectronic Engineering
       institution: Huazhong University of Science and Technology
       year: sep. 2019~present
-    - course:  Graduate Academic Preparation Program     
+    - course:  Graduate Academic Preparation Program
       institution: University of California, Santa Barbara
       year: Sep. 2022~Jun. 2023(Expected)
 # Social/Academic Networking
@@ -50,9 +50,9 @@ social:
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`,
 # and uncomment the lines below.
- - icon: cv
-   icon_pack: ai
-   link: uploads/cv.pdf
+# - icon: cv
+#   icon_pack: ai
+#   link: uploads/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
