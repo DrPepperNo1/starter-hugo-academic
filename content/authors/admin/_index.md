@@ -26,10 +26,10 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course:  B.S. in Microelectronic Engineering<br />
+    - course:  B.S. in Microelectronic Engineering
       institution: Huazhong University of Science and Technology
       year: Sep. 2019~present
-    - course:  Graduate Academic Preparation Program<br />
+    - course:  Graduate Academic Preparation Program
       institution: University of California, Santa Barbara
       year: Sep. 2022~Jun. 2023(Expected)
 # Social/Academic Networking
@@ -60,6 +60,7 @@ email: ''
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am currently a junior in Huazhong University of Science and Technology pursuing a major in Microelectronic Engineering. This September, I am going to the University of California, Santabarbara to complete my final year of study as well as meet a more wondrous world because I have been granted admission to its International Program. As a not-that-smart student, I chose to be diligent driven by a sense of obligation and earned a 3.96/4.0 cumulative GPA in my first three years of undergraduate study, which ensured that I had a relatively solid foundation in mathematics, physics and my subject area. My previous research and project experiences lie in various areas including Convolution Neural Networks, Recurrent Neural Networks, single image super resolution,  FPGA Programming (all learn by myself). Meanwhile, I am interested in various areas such as GAN for the computer vision field, DQN for game AI, Brain-inspired Computing and Devices and so on. In my opinion, try to foray into unfamiliar areas, gradually figure out the rules behind them, and finally come up with your own ideas and insights to solve problems, this series of processes in itself can give us a sense of accomplishment and fulfillment. I believe It is the process which matters most rather than the outcome. I also believe once you concentrate on the process, the outcome will come consequently.
+I am currently a junior in Huazhong University of Science and Technology pursuing a major in Microelectronic Engineering. This September, I am going to the University of California, Santabarbara to complete my final year of study as well as meet a more wondrous world for I have been granted admission to its International Program. As a not-that-smart student, I chose to be diligent driven by a sense of obligation and earned a 3.96/4.0 cumulative GPA in my first three years of undergraduate study, which ensured that I had a relatively solid foundation in mathematics, physics and my subject area.
+My previous research and project experiences lie in various areas including Convolution Neural Networks, Recurrent Neural Networks, single image super resolution,  FPGA Programming (all learn by myself). Meanwhile, I am interested in and want to give a try to various areas such as GAN for the computer vision field, DQN for game AI, Brain-inspired Computing and Devices and so on. In my opinion, try to foray into unfamiliar areas, gradually figure out the rules behind them, and finally come up with your own ideas and insights to solve problems, this series of processes in itself can give us a sense of accomplishment and fulfillment. I believe it is the process which matters most rather than the outcome. I also believe once you concentrate on the process, the outcome will come consequently.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}cv{{< /staticref >}}.
