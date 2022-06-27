@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: Experience
+title: Extracurricular Activites
 subtitle:
 
 # Date format for experience
@@ -22,19 +22,15 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
+  - title: A POTENTiAL BLOOD STEM CELL DONOR
+    company: China Marrow Donor Program (CMDP)
+    company_url: 'http://www.cmdp.org.cn/'
     company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
+    location: China
+    date_start: '2020-11-01'
     date_end: ''
     description: |2-
-        Responsibilities include:
-        
-        * Analysing
-        * Modelling
-        * Deploying
+        For more information: [my story]({{< ref "extracurricular/cmdp.md" >}})
 
   - title: Professor of Semiconductor Physics
     company: University X
