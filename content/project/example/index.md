@@ -69,7 +69,7 @@ To begin with, I considered that the running mode of an appliance is relevant in
 
 For example, when a refrigerator works, it may follow the process of cooling and thermally insulating. Then I drew the Time-Active Power diagram of the refrigerator as shown in Figure 2. based on the Low-Frequency Data read from UK-DALE. From Figure 2. We can see the working states show a periodicity from which RNN may extract some valuable information.
 
-<img src="https://s2.loli.net/2022/06/27/9bJrPhtBFaAkj3x.png" alt="image-20220627125149273" style="zoom: 67%;" />
+<img src="https://s2.loli.net/2022/06/27/9bJrPhtBFaAkj3x.png" alt="image-20220627125149273" style="zoom: 50%;" />
 
 Therefore I chose to use RNN for settling NILM Problem. I prepared the Low-Frequency Active Power Data in the appropriate shape to feed into the RNN network.
 
@@ -79,7 +79,7 @@ However, the RNN was advantageous in dealing with time series while CNN was supe
 
 My model had two branches, one is simple RNN and another is CNN+RNN. These two branches were concatenated by the *Concatenate Layer* in Keras.
 
-![image-20220627140856282](https://s2.loli.net/2022/06/27/FQhNZXdExuovIsR.png)
+![model](https://s2.loli.net/2022/06/27/gQ8fXphRSdENOCK.png)
 
 ### INPUT DATA
 
