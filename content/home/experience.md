@@ -25,18 +25,18 @@ experience:
   - title: A Potential Blood Stem Cell Donor
     company: China Marrow Donor Program (CMDP)
     company_url: 'http://www.cmdp.org.cn/'
-    company_logo: fa-solid fa-droplet
+    company_logo: hand-holding-heart
     location: China
     date_start: '2020-11-01'
     date_end: ''
     description: |2-
-        I Registered my HLA typing information in the CMDP’s database when I was a sophomore. Two months ago I was successfully matched with a patient in low‑resolution, and half a month ago another, which was unbelieveable not only because the matching probability was extremely low but also because the patients may badly need appropriate stem cells to cure their terriable disease. 
+        I Registered my HLA typing information in the CMDP’s database when I was a sophomore. Two months ago I was successfully matched with a patient in low‑resolution, and half a month ago another, wunbelievablelieveable not only because the matching probability was extremely low but also because the patients may badly need appropriate stem cells to cure their terrible disease. 
         I guess I have the possibility to save lives. Best wishes💖
 
   - title: Regular Annual Visits to Poor Families around my Hometown
     company: with my parents and their colleagues
     company_url: ''
-    company_logo: fa-light fa-handshake-simple
+    company_logo: handshake-simple
     location: China
     date_start: '2015-01-01'
     date_end: '2021-02-01'
