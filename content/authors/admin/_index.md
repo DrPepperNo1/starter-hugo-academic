@@ -14,10 +14,10 @@ organizations:
 ## Contact
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My major is related to semiconductors, nevertheless this does not prevent me from having interests in many areas, such as my original profession, AI, and so on.
 
 # Interests to show in About widget
-interests:
+techniques:
   - Convolutional Neural Networks, 
   - Recurrent Neural Networks
   - single image super resolution
