@@ -22,24 +22,27 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: A POTENTiAL BLOOD STEM CELL DONOR
+  - title: A Potential Blood Stem Cell Donor
     company: China Marrow Donor Program (CMDP)
     company_url: 'http://www.cmdp.org.cn/'
-    company_logo: org-gc
+    company_logo: fa-solid fa-droplet
     location: China
     date_start: '2020-11-01'
     date_end: ''
     description: |2-
-        For more information: [my story]({{< ref "extracurricular/cmdp.md" >}})
+        I Registered my HLA typing information in the CMDP’s database when I was a sophomore. Two months ago I was successfully matched with a patient in low‑resolution, and half a month ago another, which was unbelieveable not only because the matching probability was extremely low but also because the patients may badly need appropriate stem cells to cure their terriable disease. 
+        I guess I have the possibility to save lives. Best wishes💖
 
-  - title: Professor of Semiconductor Physics
-    company: University X
+  - title: Regular Annual Visits to Poor Families around my Hometown
+    company: with my parents and their colleagues
     company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+    company_logo: fa-light fa-handshake-simple
+    location: China
+    date_start: '2015-01-01'
+    date_end: '2021-02-01'
+    description: |2-
+        Every year before the Chinese New Year (the most important traditional festival in China), I would visit the poorest families around my hometown with my parents and their colleagues. We bestowed them many necessities and holiday wishes. Even in 2020, the visit was completed before the outbreak of Covid-19. 
+        Through year after year of personal visits, I have also witnessed the sharp improvement of their living standards. For this experience, I was awarded a public service scholarship by the college in 2021.
 
 design:
   columns: '2'

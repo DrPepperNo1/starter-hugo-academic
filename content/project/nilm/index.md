@@ -193,9 +193,9 @@ He wrote the GUI in PYQT as shown in Figure 10. He also built the power collecti
 
 ## LINKS
 
-ALL codes, model and data mentioned above are available!
+ALL codes, model and data mentioned above are available.
 
-- V-I curve: 
-- codes: 
-- Demo Video: 
+- V-I curve: https://pan.baidu.com/s/19nez3AYTSxbM3gmN2PrvOA?pwd=1234
+- codes: https://github.com/RainyDayqwq/NILM
+- Demo Video: https://pan.baidu.com/s/1DsYBwNpe-0uTgbIv3cXDQQ?pwd=1234 
 
