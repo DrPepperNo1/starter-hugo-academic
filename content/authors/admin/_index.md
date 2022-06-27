@@ -26,12 +26,12 @@ Interests:
 # Education to show in About widget
 education:
   courses:
-    - course:  B.S. in Microelectronic Engineering
-      institution: Huazhong University of Science and Technology
-      year: Sep. 2019~present
     - course:  Graduate Academic Preparation Program
       institution: University of California, Santa Barbara
       year: Sep. 2022~Jun. 2023(Expected)
+    - course:  B.S. in Microelectronic Engineering
+      institution: Huazhong University of Science and Technology
+      year: Sep. 2019~present
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
