@@ -27,8 +27,8 @@ content:
   filter_button:
     - name: All
       tag: '*'
-    - name: Deep Learning
-      tag: Deep Learning
+    - name: NILM
+      tag: Non‑intrusive Load Monitoring
     - name: Other
       tag: Demo
 
