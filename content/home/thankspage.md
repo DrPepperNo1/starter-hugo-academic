@@ -33,7 +33,7 @@ design:
 design:
   background:
 ​    # Name of image in assets/media/.
-​    image: 'backgroundimage'
+​    image: backgroundimage.jpg
 ​    # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 ​    image_darken: 0.6
 ​    #  Options are cover(default), contain, or actual size.
