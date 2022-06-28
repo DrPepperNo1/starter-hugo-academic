@@ -1,6 +1,6 @@
 ---
 title: Solving Non‑intrusive Load Monitoring Problem Utilizing the Combination of CNN and RNN.
-summary: One of my research experiences🔬.
+summary: My research experiences🔭.
 tags:
   - Non‑intrusive Load Monitoring
 date: '2022-06-27T00:00:00Z'

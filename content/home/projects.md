@@ -9,8 +9,8 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: Projects
-subtitle: ''
+title: Experience
+subtitle: 'My research experience and techniques.'
 
 content:
   # Page type to display. E.g. project.
@@ -31,7 +31,8 @@ content:
       tag: Non‑intrusive Load Monitoring
     - name: SRLUT
       tag: Single Image Super Resolution
-
+    - name: FPGA
+      tag: Some exercises
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
   columns: '2'

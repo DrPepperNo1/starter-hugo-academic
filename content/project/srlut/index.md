@@ -1,6 +1,6 @@
 ---
 title: Replication of the SRLUT
-summary: My research experiences🔬.
+summary: My research experiences🔭.
 tags:
   - Single Image Super Resolution
 date: '2022-06-27T00:00:00Z'
