@@ -32,7 +32,7 @@ subtitle = ""
 
 # Background image.
 
-image: background.jpg
+image: backgroundimage.jpg
 
 image_darken: 0.6 
 
