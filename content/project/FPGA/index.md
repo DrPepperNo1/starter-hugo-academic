@@ -2,7 +2,7 @@
 title: Some FPGA exercises
 summary: My techniques🛠️.
 tags:
-  - FPGA
+  - Some exercises
 date: '2022-06-27T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
@@ -40,5 +40,4 @@ Now that the high-performance super resolution algorithm has been found (SRLUT),
 ALL codes mentioned above are available.
 
 - Codes: https://github.com/RainyDayqwq/FPGA
-
 
