@@ -23,13 +23,11 @@ design:
   columns: "1"
   # Use a dark navy background with light text.
 background:
-  color: 'navy'
-  text_color_light: true
-  image: backgroundimage.jpg
+  image: ‘backgroundimage.jpg’
   image_darken: 0.6 
   image_size: cover
   image_position: center
-  image_parallax: true
+  image_parallax: false
   text_color_light: true
 spacing:
     # Customize the section spacing. Order is top, right, bottom, left.
@@ -37,5 +35,6 @@ spacing:
 advanced:
   css_style: ''
   css_class: ''
+  
 ---
 Thank you
