@@ -6,7 +6,7 @@
 widget = "blank"  # See https://wowchemy.com/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 1000  # Order that this section will appear.
+weight = 100  # Order that this section will appear.
 
 title = "Academic Template"
 subtitle = ""
@@ -53,8 +53,7 @@ text_color_light: true
   # image_position = "center"  # Options include `left`, `center` (default), or `right`.
   # image_parallax = true  # Use a fun parallax-like fixed background effect? true/false
 
-  # Text color (true=light or false=dark).
-  text_color_light = true
+# Text color (true=light or false=dark).
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.
