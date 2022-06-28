@@ -27,10 +27,10 @@ Interests:
 education:
   courses:
     - course:  Graduate Academic Preparation Program
-      institution: University of California, Santa Barbara
+      institution: University of California, Santa Barbara(Santa Barbara, CA)
       year: Sep. 2022~Jun. 2023(Expected)
     - course:  B.E. in Microelectronic Engineering
-      institution: Huazhong University of Science and Technology
+      institution: Huazhong University of Science and Technology(Wuhan, China)
       year: Sep. 2019~present
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -60,7 +60,7 @@ email: ''
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am currently a junior in Huazhong University of Science and Technology pursuing a major in Microelectronic Engineering. This September, I am going to the University of California, Santa barbara to complete my final year of study for I have been granted admission to its International Program. As a not-that-smart student, I chose to be diligent and earned a 3.96/4.0 cumulative GPA in my first three years of undergraduate study, which ensured that I had a relatively solid foundation in mathematics, physics and my subject area.
+I am currently a junior in Huazhong University of Science and Technology pursuing a major in Microelectronic Engineering. This September, I am going to the University of California, Santa Barbara to complete my final year of study for I have been granted admission to its International Program. As a not-that-smart student, I chose to be diligent and earned a 3.96/4.0 cumulative GPA in my first three years of undergraduate study, which ensured that I had a relatively solid foundation in mathematics, physics and my subject area.
 
 My previous research and project experiences lie in various areas including Convolution Neural Networks, Recurrent Neural Networks, single image super resolution,  FPGA Programming (all learned by myself). Meanwhile, I am interested in and want to give a try to more areas such as GAN for the computer vision field, DQN for game AI, Brain-inspired Computing and Devices and so on. 
 
