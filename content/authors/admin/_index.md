@@ -6,7 +6,7 @@ title: Xia Yu(夏雨)
 superuser: true
 
 # Role/position/tagline
-role: Senior in Microelectronic Engineering
+role: Junior in Microelectronic Engineering
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: Huazhong University of Science and Technology(Wuhan, China)
