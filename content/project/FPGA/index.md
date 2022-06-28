@@ -1,8 +1,8 @@
 ---
-title: Some FPGA exercises
+title: Some FPGA Exercises
 summary: My techniques🛠️.
 tags:
-  - Some exercises
+  - Some Exercises
 date: '2022-06-27T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
