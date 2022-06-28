@@ -13,10 +13,10 @@ weight: 90
 
 # Section title
 
-title: Thank you.
+title: Thank you. 
 
 # Section subtitle
-subtitle:
+subtitle: Thank you so much for taking the time to read my article.
 
 # Section design
 
@@ -46,4 +46,8 @@ design:
 ​    text_color_light: true
 
 ---
-Thank you
+![backgroundimage](https://s2.loli.net/2022/06/28/YGhv3P2cJyaSLkj.jpg)
+
+I appreciate your attention and eagerly await your response.
+
+Here is my email address: RainHsiaqwq@gmail.com
