@@ -10,7 +10,7 @@ headless: true
 weight: 65
 
 title: Extracurricular Activities
-subtitle: I believe that human beings need to get warmth from helping each other, so I mainly participate in some social activities outside of the classroom to find the meaning of life and deliver my warmth.
+subtitle: I believe that human beings need to get warmth from helping each other, thus I mainly participate in some social activities outside of the classroom to find the meaning of life and deliver my warmth.🕊️
 
 # Date format for experience
 #   Refer to https://wowchemy.com/docs/customization/#date-format
