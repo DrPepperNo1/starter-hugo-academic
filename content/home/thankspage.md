@@ -15,7 +15,7 @@ weight: 90
 title: Thank you. 
 
 # Section subtitle
-subtitle: Thank you so much for taking the time to read my article.
+subtitle: Thank you so much for taking the time to view my homepage.
 
 # Section design
 
@@ -47,7 +47,7 @@ design:
 
 ---
 
-![backgroundimage](https://s2.loli.net/2022/06/28/YGhv3P2cJyaSLkj.jpg)
+<img src="https://s2.loli.net/2022/06/28/YGhv3P2cJyaSLkj.jpg" alt="backgroundimage" style="zoom: 50%;" />
 
 I appreciate your attention and eagerly await your response.
 
