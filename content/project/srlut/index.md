@@ -32,170 +32,36 @@ url_video: ''
 
 ## BACKGROUND
 
-### INTRODUCTION
+I participated in the China College IC Competition on Mar. 2022. The task of my team was to design an Upsampling IP which could resize a low-resolution image (960 × 540) to high resolution image (3840 × 2160) with good performance in all of three metrics: PSNR, SISM and Lpips. I investigated several algorithms including [AMD FSR](https://www.amd.com/en/technologies/fidelityfx-super-resolution), [SelfExSR](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Huang_Single_Image_Super-Resolution_2015_CVPR_paper.pdf) and [SRLUT](https://openaccess.thecvf.com/content/CVPR2021/papers/Jo_Practical_Single-Image_Super-Resolution_Using_Look-Up_Table_CVPR_2021_paper.pdf). I tried to replicate the AMD FSR but failed because I lacked reference to its rationale. Though my algorithm could export 4K images, the quality of them were inferior. Then I found the SelfExSR, which was published on CVPR, and its source code. However, the source code was written for Windows without a Linux version, which means it cannot directly run on our advisor's server. After a seriseriesattempts, I finally run it on the Linux server as well as got high-quality of output images. Nevertheless, SelfExSR was a traditional single image super-resolution algorithm thus it used various methods to extract information from the input image, which made the algorithm too complex to be deployed in FPGA. Finally, I came across SRLUT when I searched for algorithms on Google Scholar. I almost replicated the whole work of SRLUT.
 
-The recent increase in installations of smart meters in households makes it possible to provide more specific information about appliance usage in a family. If we can decide what kinds of appliances are running now just through the data gleaned by the smart meters? This is what Non‑intrusive Load Monitoring (NILM) focuses on.
+## INTRODUCTION OF SRLUT
 
-NILM Problem has practical significance in many aspects. For electricity suppliers, they could ameliorate their supplying strategies by utilizing the data generated from the NILM algorithm. For domestic users, they may save on electricity costs by getting useful information about appliance usage and their consumption behavior.
+The author first built up a super resolution CNN. This CNN hardly had any difference from other simple super resolution CNN except for its small receptive field. The kernal size of the input convolutional layer was as small as 2×2. 
 
-I proposed an approach based on the combination of CNN and RNN to solve NILM Problem.
+Then, the author trained the net on public datasets. Until now there was nothing special.
 
-### PUBLIC DATASETS
+After the net had been trained successfully, the author prepared all combinations of the input data and fed them into the net then got the corresponding output of 16 pixels. Consequently, the author transferred the net into a LUT called SRLUT by repeating the process mentioned above. For practical usage, the author uniformly divided the original input space of {{< math >}}$2^8${{< /math >}} bins into {{< math >}}$2^4+1${{< /math >}} bins. Now let us estimate how large the SRLUT is. The number of combinations entered is {{< math >}}$(2^4+1)^4${{< /math >}}, for a total of 83521. For each combination of inputs, the output is 16 values from 0 to 255. That is, 16 one-byte. Therefore the size of the entire lookup table is {{< math >}}$(2^4+1)^4 \times 16=1.274MB${{< /math >}}. For RGB triple channel, the whole SRLUT's size is {{< math >}}$3 \times 1.274MB=3.830MB${{< /math >}}. 
 
-There are many available public datasets, such as UK-DALE, REDD, LAWE, AMPDS and so on. 
-
-I choose [UK-DALE](https://www.nature.com/articles/sdata20157/), which is an open-access dataset from the UK recording Domestic Appliance-Level Electricity.
-
-Data involved:
-
-- High-Frequency Data: The whole-house's voltage and current data at a 16 kHz sample rate
-- Low-Frequency Data: Individual appliances' active power data at a 1/6 Hz sample rate
-
-### OPEN-SOURCE TOOLKIT
-
-[NILMTK](https://nilmtk.github.io/) is a toolkit designed to help researchers evaluate the accuracy of NILM algorithms and import data from public datasets. 
-
-In my work, I use NILMTK to read the data from dataset files in .h5 format.
+With the small size and simple implementation, The SRLUT is appropriate for hardware platforms, such as FPGA. 
 
 ## MY WORK
 
-### Network Architecture
+I built SRLUT with Keras as well as wrote periphery scripts enabling the training process to operate automatically. Besides, I rewrote the code of someone else's web crawler to automatically crawl 4K and PNG format images on the Internet as the training dataset.
 
-I chose the artificial neural network to solve NILM Problem because it has been implemented in many areas with excellent outcomes. 
+From this replication work, I have gained a deeper understanding of neural networks.
 
-To begin with, I considered that the running mode of an appliance is relevant in the time axis, which is shown in Figure 1.
+First, I have a deeper understanding of the dimensionality of the input and output of neural networks. Initially, I learned that the batch operation was averaging, and I was not sure what that meant. It was not until I wrote my own MSE loss function and found it have a large deviation from the result calculated by Tensorflow's official MSE loss, I went to line by line to observe the tensor in different positions of the net. Finally, I settled this problem by dividing the output of loss by batch size. Therefore my conclusion is: it seems that the different channels of the *batch dimension* are independent of each other until they are fed into the loss function for calculation during the Keras operation. The data between the different batches are summed and averaged at the loss function.
 
-<img src="https://s2.loli.net/2022/06/27/7wtMkAENrSgHuWV.png" alt="image-20220627111732394" style="zoom:80%;" />
+Second, I figure out how to accelerate the speed of training and prediction by setting the size of the batch. At first, I set the batch to four and only input four 2x2 pixel areas at a time. In this circumstance, the training was very slow as one color channel of an image took even more than one hour to train. Then I turned up the batch size to 180*4 as memory would allow and found that the training time was dramatically reduced to a few minutes. I think one possible explanation for this phenomenon is: The process of calling Keras functions to perform operations takes a lot of time, even more time than computing the data been fed into the net. Therefore increasing the size of the batch appropriately could be beneficial while too large batch may lead to problems.
 
-For example, when a refrigerator works, it may follow the process of cooling and thermally insulating. Then I drew the Time-Active Power diagram of the refrigerator as shown in Figure 2. based on the Low-Frequency Data read from UK-DALE. From Figure 2. We can see the working states show a periodicity from which RNN may extract some valuable information.
+Third, I learn more about CNN for the single image super-resolution field. I wrote my own script to implement the function of [Pixel Shuffle Layer](https://pytorch.org/docs/stable/generated/torch.nn.PixelShuffle.html) based on the simple idea of resizing without any previous knowledge thus I comprehended how CNN could export upsampling images. I also learned the fact that the [BatchNormalization Layer](https://keras.io/api/layers/normalization_layers/batch_normalization/), which has yielded many results in other areas, is not applicable in a super-resolution CNN. BatchNormalization Layer effectively 'standardizes' the distribution of the output of the previous layer to be more efficiently processed by the subsequent layer. This 'standardizes' contributes to classification tasks because it can smooth out noise or improve generalization over other data. However, In super-resolution fields, there is no need for standardizing the data to a certain interval for the input images' distribution of the pixel value can be concentrated in any position from 0 to 255. When I trained my net, I attempted to insert BatchNormalization Layers between 2D-Convolutional Layers only to observe the performance of the net went bad.
 
-<img src="https://s2.loli.net/2022/06/27/9bJrPhtBFaAkj3x.png" alt="image-20220627125149273" style="zoom: 50%;" />
-
-Therefore I chose to use RNN for settling NILM Problem. I prepared the Low-Frequency Active Power Data in the appropriate shape to feed into the RNN network.
-
-Secondly, I noticed that most previous works hardly used the High-Frequency Data, which may involve abundant details contributing to identifying what appliances are running. Though UK-DALE provided me with enough data, It was challenging to come up with an appropriate method to feed this part of the data into the neural network. Finally, I was inspired by the project's name, Research on Power Load Identification based on image encoding, decided by my advisor, to transfer the sequence data into the form of V-I curves. Then I wrote the python code to draw V-I curves. Drawing one V-I curve would use continuous 6 seconds' High-Frequency Data, totally 96K voltage and current points respectively. The reason why I chose a six-second window to draw the V-I curve was to match the Low-Frequency Data's sample rate. In Figure 3. We can see the various V-I curves at different times with different combinations of appliances in operation. CNN has been successfully being used in extracting the details of images thus I chose to use CNN to deal with these High-Frequency Data.<img src="https://s2.loli.net/2022/06/27/k4zvKmOjEGVpZ2Y.png" alt="image-20220627133743445" style="zoom:120%;" />
-
-However, the RNN was advantageous in dealing with time series while CNN was superior in processing images. Consequently, I combined these two types of neural networks and built my CNN-RNN mixed model.
-
-My model had two branches, one is simple RNN and another is CNN+RNN. These two branches were concatenated by the *Concatenate Layer* in Keras.
-
-![model](https://s2.loli.net/2022/06/27/gQ8fXphRSdENOCK.png)
-
-<img src="https://s2.loli.net/2022/06/27/hvOWwCJaD3erSjl.png" alt="image-20220627144213825" style="zoom: 80%;" />
-
-### INPUT DATA
-
-From Figure 4. We can see the model has two inputs——input_1 and input_2. Input_1 was the High-Frequency Data (having been transformed to V-I curve form) while Input_2 was the Low-Frequency Data(the sum of the whole-house's active power). These two types of input data were both prepared into the appropriate shape *Batch × Lookback × Input Dim* to be fed into the model as shown in Figure 5. 
-
-<img src="https://s2.loli.net/2022/06/27/VM3t5zB1w8ZSQEr.png" alt="image-20220627142349105" style="zoom:80%;" />
-
-- Batch Size: One batch of data per input into the model
-
-- Lookback: Time window of 120 seconds
-
-- Input Dim: Active power and V-I curve every 6 seconds
-
-Besides, Figure 6. shows how *Lookback* was arranged under the *Batch* dimension.
-
-<img src="C:\Users\99259\AppData\Roaming\Typora\typora-user-images\image-20220627150209383.png" alt="image-20220627150209383" style="zoom:80%;" />
-
-> P.S. 
->
-> The resolution of the V-I curve is 32×32, which is enough for practical applications. Plus, the V-I curve has been converted to a binary image instead of the common RGB image because it is the shape of the curve, rather than its color that matters in this problem.
-
-### CREATE LABELS
-
-NILM Problem is supervised learning thus It is necessary to create labels. In my model, I would predict 5 appliances involving Fridge freezer, Kettle, Microwave, Television, and Washer dryer. The label was a numpy list looking like [1, 0, 0, 1, 0] every 6 seconds. With each dimension in the label standing for an appliance, the label was "1" when the corresponding appliance reached its active power threshold set by me otherwise the label would be "0". Figure 7. demonstrates the label.
-
-<img src="https://s2.loli.net/2022/06/27/rZ74OM9zutbnjLo.png" alt="image-20220627154747602" style="zoom:80%;" />
-
-### PLATFORM
-
-[TensorFlow](https://www.tensorflow.org/) is an open-source deep learning library. [Keras](https://www.guru99.com/keras-tutorial.html) is an Open Source Neural Network library written in Python that runs on top of Tensorflow.
-
-I used python 3.8 + Keras + Tensorflow2.0 to build my network and a lot of ancillary scripts such as Generator, input data reshaper, the script converting High-Frequency Data to V-I curves and so on.
-
-All codes have been updated to my [Github repository](https://github.com/RainyDayqwq/NILM).
-
-### TRAINING DETAILS
-
-I exported nine weeks of data (a total of 907,200 V-I curves) and trained on part of them. I don't remember exactly what data I trained on, I just remember that the training lasted over ten hours on my Laptop with Intel i5-11400H CPU and Nvdia RTX3050ti GPU.
-
-### OUTCOMES
-
-I tested the performance of the model in identifying the operation of the fridge freezer with 42.67 hours of continuous data in untrained data and achieved a good outcome as shown in Figure 8.
-
-<img src="https://s2.loli.net/2022/06/27/GBpOLYUmISsx85b.png" alt="image-20220627163214706" style="zoom:80%;" />
-
-Then I calculated some indicators from the confusion matrix: 
-
-
-{{< math >}}
-$$
-\left\{
-	\begin{aligned}
-		Acc&=0.8057 \\
-        Precision&=0.7096 \\
-        Recall&=0.7758 \\
-        Specificity&=0.8225 \\
-        F1\ score &= 0.7412
-	\end{aligned}
-\right.
-\tag{1}
-$$
-{{< /math >}}
-
-The F1 score states the equilibrium between the precision and the recall thus it can well reflect the performance of the model. 
-
-I compared my result with others' work.
-
-In [Sun's work](https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201802&filename=1018121837.nh&uniplatform=NZKPT&v=8D4Qlp0uzIKpLsk8uFJ4JUIqZOO5jUZ-u2ePc7aA-oQVqKn9llj9b-eIBE8GH_vJ), he used the FHMM algorithm and got the *F1 score = 0.528* on a refrigerator. My results improved by 20 percent over his on the refrigerator.
-
-In [Jack Kelly and William Knottenbelt‘s work](https://arxiv.org/pdf/1507.06594.pdf), they used LSTM to solve NILM Problem getting the *F1 score = 0.74* on a refrigerator. Though My result is similar to theirs, it is worth mentioning that my work has more practical meaning. That is because their input data is simply a combination of five appliances while my input data is the whole house's total data involving dozens of appliances. 
-
-However, my model achieved poor results on other appliances. For instance, the result of microwave is illustrated in Figure 9.
-
-<img src="https://s2.loli.net/2022/06/27/G4bZPC9De1UwV5p.png" alt="image-20220627194750713" style="zoom:80%;" />
-
-I also calculated some indicators from the confusion matrix: 
-
-
-{{< math >}}
-$$
-\left\{
-	\begin{aligned}
-		Acc&=0.9831 \\
-        Precision&=0.3389 \\
-        Recall&=0.3849 \\
-        Specificity&=0.9906 \\
-        F1\ score &= 0.3604
-	\end{aligned}
-\right.
-\tag{2}
-$$
-{{< /math >}}
-
-As we can see in (2), compared with the very high accuracy, the F1 score is terrible. This is because the dataset is extremely imbalanced. 
-
-I wrote a python script to observe the percentage of running time for different appliances. The refrigerator runs for 40% of a day while the value of the microwave is only 0.007%.
-
-To solve the problem of imbalanced data, I have been attempting to substitute the previous Binary Cross Entropy loss function to Weighted Cross Entropy together with selecting some appliances with longer operating time for prediction. I also wanted to use data augmentation to populate the data of appliances with shorter run times.
-
-Related work is still in progress...
-
-## GROUPMEMBERS' WORK
-
-My reliable group member, Wei Tang has deployed the model at the edge based on Raspberry Pi 4B.
-
-He wrote the GUI in PYQT as shown in Figure 10. He also built the power collection section.
-
-<img src="https://s2.loli.net/2022/06/27/OZMkDcPS1XhKoyG.png" alt="image-20220627202229689" style="zoom:80%;" />
+Finally, the output image of my network was slightly strange, which I thought may be caused by the optimizer parameter settings was inappropriate or the batch size was too large. I also did not write the script that turns the network into a LUT. Next, I plan to complete these sections and collaborate with my team members to complete the FPGA hardware implementation.
 
 ## LINKS
 
-ALL codes, model and data mentioned above are available!
+ALL codes, model and data mentioned above are available.
 
-- V-I curve: 
-- codes: 
-- Demo Video: 
+- Codes: https://github.com/RainyDayqwq/SingleImageSuperResolution
 
+- PPT: {{< staticref "uploads/SRLUT.pptx" "newtab" >}}download{{< /staticref >}}.
