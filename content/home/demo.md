@@ -7,7 +7,7 @@
 widget = "blank"  # See https://wowchemy.com/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 1000  # Order that this section will appear.
+weight = 100  # Order that this section will appear.
 
 title = "Thank U :)"
 subtitle = ""
@@ -17,7 +17,7 @@ subtitle = ""
   columns = "1"
 
 [design.background]
-  # Apply a background color, gradient, or image.
+# Apply a background color, gradient, or image.
 #   Uncomment (by removing `#`) an option to apply it.
 
 #   Choose a light or dark text color by setting `text_color_light`.
@@ -28,8 +28,8 @@ subtitle = ""
   # color = "navy"
 
   # Background gradient.
- # gradient_start = "Blue"
- # gradient_end = "White"
+gradient_start = "Blue"
+gradient_end = "White"
 
 # Background image.
 
