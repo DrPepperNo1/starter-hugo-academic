@@ -9,7 +9,7 @@ superuser: true
 role: Senior in Microelectronic Engineering
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Huazhong University of Science and Technology
+  - name: Huazhong University of Science and Technology(Wuhan, China)
     url: http://english.hust.edu.cn/
 ## Contact
 
