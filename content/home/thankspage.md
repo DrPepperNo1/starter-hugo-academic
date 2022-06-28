@@ -12,7 +12,7 @@ weight: 90
 
 # Section title
 
-title: Hello
+title: Thank you.
 
 # Section subtitle
 subtitle:
@@ -23,11 +23,11 @@ design:
   columns: "1"
   # Use a dark navy background with light text.
 background:
-  image: ‘backgroundimage.jpg’
-  image_darken: 0.6 
-  image_size: cover
+  image: backgroundimage.jpg
+  image_darken: 0.5 
+  image_size: center
   image_position: center
-  image_parallax: false
+  image_parallax: true
   text_color_light: true
 spacing:
     # Customize the section spacing. Order is top, right, bottom, left.
@@ -35,6 +35,6 @@ spacing:
 advanced:
   css_style: ''
   css_class: ''
-  
+
 ---
 Thank you
