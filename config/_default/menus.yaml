@@ -4,7 +4,7 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
+  - name: About me
     url: '#about'
     weight: 10
   - name: Experience
@@ -12,7 +12,7 @@ main:
     weight: 20
   - name: Extracurricular
     url: '#experience'
-    weight: 25
+    weight: 24
   - name: Awards
     url: '#accomplishments'
     weight: 25
