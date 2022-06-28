@@ -1,4 +1,4 @@
-+++
+---
 # A Demo section created with the Blank widget.
 
 # Any elements can be added in the body: https://wowchemy.com/docs/writing-markdown-latex/
@@ -64,7 +64,7 @@ image_parallax = true
 
  # CSS class.
  css_class = ""
-+++
+---
 
 ## 还可以在网页上展示照片🥰
 
