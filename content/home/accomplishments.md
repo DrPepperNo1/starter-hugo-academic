@@ -3,7 +3,8 @@ widget: accomplishments
 headless: true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
-Honors & Awards
+title: 'Honors & Awards'
+subtitle:
 # Date format
 #   Refer to https://wowchemy.com/docs/customization/#date-format
 date_format: Jan 2006
