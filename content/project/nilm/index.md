@@ -71,13 +71,13 @@ For example, when a refrigerator works, it may follow the process of cooling and
 
 <img src="https://s2.loli.net/2022/06/27/9bJrPhtBFaAkj3x.png" alt="image-20220627125149273" style="zoom: 50%;" />
 
-Therefore I chose to use RNN for settling NILM Problem. I prepared the Low-Frequency Active Power Data in the appropriate shape to feed into the RNN network.
+Therefore, I chose RNN to settle NILM Problem. I prepared the Low-Frequency Active Power Data in the appropriate shape to feed into the RNN network.
 
-Secondly, I noticed that most previous works hardly used the High-Frequency Data, which may involve abundant details contributing to identifying what appliances are running. Though UK-DALE provided me with enough data, It was challenging to come up with an appropriate method to feed this part of the data into the neural network. Finally, I was inspired by the project's name, Research on Power Load Identification based on image encoding, decided by my advisor, to transfer the sequence data into the form of V-I curves. Then I wrote the python code to draw V-I curves. Drawing one V-I curve would use continuous 6 seconds' High-Frequency Data, totally 96K voltage and current points respectively. The reason why I chose a six-second window to draw the V-I curve was to match the Low-Frequency Data's sample rate. In Figure 3. We can see the various V-I curves at different times with different combinations of appliances in operation. CNN has been successfully being used in extracting the details of images thus I chose to use CNN to deal with these High-Frequency Data.<img src="https://s2.loli.net/2022/06/27/k4zvKmOjEGVpZ2Y.png" alt="image-20220627133743445" style="zoom:120%;" />
+Secondly, I noticed that most previous works hardly used High-Frequency Data, which would involve abundant details contributing to identifying what appliances are running. Though UK-DALE provided me with enough high-frequency data, it was challenging to come up with an appropriate method to feed this part of the data into the neural network. Finally, I was inspired by the project's name, Research on Power Load Identification based on image encoding, decided by my advisor, to transfer the sequence data into the form of V-I curves. Then I wrote the python code to draw V-I curves. Drawing one V-I curve would use continuous 6 seconds' High-Frequency Data, totally 96K voltage and current points respectively. The reason why I chose a six-second window to draw the V-I curve was to match the Low-Frequency Data's sample rate. In Figure 3. We can see the various V-I curves at different times with different combinations of appliances in operation. CNN has been successfully being used in extracting the details of images thus I chose CNN to deal with these High-Frequency Data.<img src="https://s2.loli.net/2022/06/27/k4zvKmOjEGVpZ2Y.png" alt="image-20220627133743445" style="zoom:120%;" />
 
 However, the RNN was advantageous in dealing with time series while CNN was superior in processing images. Consequently, I combined these two types of neural networks and built my CNN-RNN mixed model.
 
-My model had two branches, one is simple RNN and another is CNN+RNN. These two branches were concatenated by the *Concatenate Layer* in Keras.
+My model had two branches, one is simple RNN and the other is CNN+RNN. These two branches were concatenated by the *Concatenate Layer* in Keras.
 
 ![model](https://s2.loli.net/2022/06/27/gQ8fXphRSdENOCK.png)
 
@@ -105,7 +105,7 @@ Besides, Figure 6. shows how *Lookback* was arranged under the *Batch* dimension
 
 ### CREATE LABELS
 
-NILM Problem is supervised learning thus It is necessary to create labels. In my model, I would predict 5 appliances involving Fridge freezer, Kettle, Microwave, Television, and Washer dryer. The label was a numpy list looking like [1, 0, 0, 1, 0] every 6 seconds. With each dimension in the label standing for an appliance, the label was "1" when the corresponding appliance reached its active power threshold set by me otherwise the label would be "0". Figure 7. demonstrates the label.
+NILM Problem is supervised learning thus It is necessary to create labels. In my model, I would predict 5 appliances involving Fridge freezer, Kettle, Microwave, Television, and Washer dryer. The label was a numpy list looking like [1, 0, 0, 1, 0] every 6 seconds. With each dimension in the label standing for an appliance, the label was "1" when the corresponding appliance reached its active power threshold set by me, otherwise the label would be "0". Figure 7. demonstrates the label.
 
 <img src="https://s2.loli.net/2022/06/27/rZ74OM9zutbnjLo.png" alt="image-20220627154747602" style="zoom:80%;" />
 
@@ -177,7 +177,7 @@ $$
 
 As we can see in (2), compared with the very high accuracy, the F1 score is terrible. This is because the dataset is extremely imbalanced. 
 
-I wrote a python script to observe the percentage of running time for different appliances. The refrigerator runs for 40% of a day while the value of the microwave is only 0.007%.
+I wrote a python script to observe the percentage of running time for different appliances. The refrigerator runs for 40% of a day while the run time of the microwave is only 0.007%.
 
 To solve the problem of imbalanced data, I have been attempting to substitute the previous Binary Cross Entropy loss function to Weighted Cross Entropy together with selecting some appliances with longer operating time for prediction. I also wanted to use data augmentation to populate the data of appliances with shorter run times.
 
