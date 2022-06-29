@@ -10,7 +10,7 @@ headless: true
 weight: 40
 
 title: Experience
-subtitle: 'My research experience and techniques.'
+subtitle: 'My research experience and techniques. You can press images below to open subpagesfor more details.'
 
 content:
   # Page type to display. E.g. project.
