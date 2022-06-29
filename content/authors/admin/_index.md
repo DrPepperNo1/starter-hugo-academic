@@ -60,7 +60,7 @@ email: ''
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}cv{{< /staticref >}}, {{< staticref "uploads/acdamicrecord.pdf" "newtab" >}}academic record{{< /staticref >}}, {{< staticref "uploads/成绩单.pdf" "newtab" >}}成绩单{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}cv{{< /staticref >}}, {{< staticref "uploads/academicrecord.pdf" "newtab" >}}academic record{{< /staticref >}}, {{< staticref "uploads/成绩单.pdf" "newtab" >}}成绩单{{< /staticref >}}.
 
 I am currently a junior at Huazhong University of Science and Technology pursuing a major in Microelectronic Engineering. This September, I am going to the University of California, Santa Barbara to complete my final year of study because I have been granted admission to its International Program. In my first three years of undergraduate study, I chose to be diligent and earned a 3.96/4.0 cumulative GPA, which ensured that I had a relatively solid foundation in mathematics, physics and my subject area.
 
