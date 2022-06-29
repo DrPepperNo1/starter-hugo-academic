@@ -17,12 +17,12 @@ weight: 80
 item:
   - organization: Mathematical Contest in Modeling (MCM)
     organization_url: ''
-    title: Honorable Mention
+    title: Honorable Mention, Problem B
     url: 'https://www.comap-math.com/mcm/2022Certs/2221948.pdf'
     certificate_url: ''
     date_start: '2022-02-20'
     date_end: ''
-    description: 'Problem B'
+    description: 'I was responsible for the modeling (based on NSGA-II algorithm) and all the programming work.'
   - organization: School of Optical and Electronic Information
     organization_url: 'http://english.oei.hust.edu.cn/'
     title: College Public Service Scholarship
