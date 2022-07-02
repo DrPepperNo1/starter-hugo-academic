@@ -1,6 +1,6 @@
 ---
 title: Solving Non‑intrusive Load Monitoring Problem Utilizing the Combination of CNN and RNN.
-summary: My research experiences🔭.
+summary: My research experiences🔭. This experience is based on the 'College Students’ Innovative Entrepreneurial Training Plan Program' I attened as the team leader of a four-person team.
 tags:
   - Non‑intrusive Load Monitoring
 date: '2022-06-27T00:00:00Z'
@@ -182,6 +182,9 @@ I wrote a python script to observe the percentage of running time for different 
 To solve the problem of imbalanced data, I have been attempting to substitute the previous Binary Cross Entropy loss function to Weighted Cross Entropy together with selecting some appliances with longer operating time for prediction. I also wanted to use data augmentation to populate the data of appliances with shorter run times.
 
 Related work is still in progress...
+
+> Updated on July 2, 2022
+> The improved network has been being trained on the training set for more than ten hours. The intermediate training results show that the performance of the network on the validation set is improving. If the network's final performance is relatively good, I plan to publish my original results in the form of a paper.
 
 ## GROUPMEMBERS' WORK
 
