@@ -2,7 +2,7 @@
 title: Some Term Projects.
 summary: My term projects.
 tags:
-  - Some Exercises
+  - Some Term Projects
 date: '2022-07-02T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
