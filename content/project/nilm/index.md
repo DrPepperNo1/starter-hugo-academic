@@ -202,3 +202,8 @@ ALL codes, model and data mentioned above are available.
 - Codes: https://github.com/RainyDayqwq/NILM
 - Demo Video: https://pan.baidu.com/s/1DsYBwNpe-0uTgbIv3cXDQQ?pwd=1234 
 
+Also you can watch my demo video here:
+
+Note: *The video has background music*🎵, please pay attention to your surrounding environment before playing.
+
+{{< video library="true" src="展示视频-录像.mp4" controls="yes" >}}

@@ -33,6 +33,8 @@ content:
       tag: Single Image Super Resolution
     - name: FPGA
       tag: Some Exercises
+    - name: Term Projects
+      tag: Term Projects
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
   columns: '1'
