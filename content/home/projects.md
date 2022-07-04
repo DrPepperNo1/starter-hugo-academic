@@ -34,7 +34,7 @@ content:
     - name: FPGA
       tag: Some Exercises
     - name: Term Projects
-      tag: Term Projects
+      tag: Some Term Projects
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
   columns: '1'
