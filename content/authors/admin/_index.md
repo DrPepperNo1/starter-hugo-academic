@@ -18,9 +18,9 @@ bio: Although my major is related to semiconductors, it does not prevent me from
 
 # Interests to show in About widget
 Interests:
-  - Convolutional Neural Networks, 
+  - Sophisticated Microelectronic Devices
+  - Convolutional Neural Networks
   - Recurrent Neural Networks
-  - single image super resolution
   - FPGA Programming
 
 # Education to show in About widget
@@ -74,7 +74,7 @@ I am fortunate enough to work out a significant problem I encountered, but I kno
 
 In my opinion, trying to foray into unfamiliar areas, gradually figuring out the rules behind them, and finally coming up with your own small ideas and insights to solve problems, this series of processes in itself could be such a fulfilling thing to encourage you. When you go deeper into one field, the field will occupy a part of your mind where you can stroll at any time or place, which would give you a sense of satisfaction. This satisfaction could bring you equanimity together with security, which is quite dissimilar to the temporary satisfaction gained from playing computer games or watching entertaining movies.
 
-Meanwhile, I am interested in and want to give a try to more areas such as GAN for the computer vision field, DQN for game AI, Brain-inspired Computing and Devices and so on. 
+Meanwhile, I am interested in and want to give a try to more areas such as Brain-inspired Computing Devices, Photonic Integrated Circuits, GAN for the computer vision field, DQN for game AI and so on. 
 
 I’m applying for a graduate program or a research internship.✨
 
