@@ -22,7 +22,7 @@ item:
     certificate_url: ''
     date_start: '2022-08-23'
     date_end: ''
-    description: 'I was responsible for the modeling (based on NSGA-II algorithm) and all the programming work.'
+    description: 'JINGJIA MICRO'
   - organization: Mathematical Contest in Modeling (MCM)
     organization_url: ''
     title: Honorable Mention, Problem B
