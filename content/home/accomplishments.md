@@ -15,6 +15,14 @@ weight: 80
 #   Leave other parameters empty if not required.
 #   Begin/end multi-line descriptions with `>-`.
 item:
+  - organization: China College IC Competition
+    organization_url: ''
+    title: National Second Prize
+    url: ''
+    certificate_url: ''
+    date_start: '2022-08-23'
+    date_end: ''
+    description: 'I was responsible for the modeling (based on NSGA-II algorithm) and all the programming work.'
   - organization: Mathematical Contest in Modeling (MCM)
     organization_url: ''
     title: Honorable Mention, Problem B
